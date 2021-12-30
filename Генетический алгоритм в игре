@@ -112,4 +112,5 @@ class HaarN():
             WHWx = self.inverse(self.forward(x, device=device), device=device)
             out = torch.sum(torch.abs(x - WHWx))
             assert out < EPS * x.shape[0] * x.shape[1], 'Inverse test failed!'
+            
 
